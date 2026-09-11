@@ -5,6 +5,10 @@ Workers Static Assets at https://tablou.cristian-nichifor.com.
 
 ## Deploy
 
+CI (`.github/workflows/deploy-cloudflare.yml`) deploys on every push to
+`main` using `wrangler-action`; it needs the `CLOUDFLARE_API_TOKEN` +
+`CLOUDFLARE_ACCOUNT_ID` repo secrets. Manual fallback:
+
 ```
 pnpm exec wrangler deploy
 ```
