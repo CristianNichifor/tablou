@@ -1,0 +1,8 @@
+name = "tablou"
+compatibility_date = "2026-09-11"
+
+# Umbrella landing page for the civic dashboards, served from Workers
+# Static Assets (free tier). No build step — plain HTML in public/.
+[assets]
+directory = "./public/"
+not_found_handling = "single-page-application"

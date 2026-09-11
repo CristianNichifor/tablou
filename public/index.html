@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tablou de bord — proiecte civice despre România</title>
+<meta name="description" content="Proiecte civice open source: bugetul României, companii de stat și indicatori economici, din surse publice oficiale." />
+<style>
+  :root {
+    --blue: #1d4ed8;
+    --blue-dark: #1e40af;
+    --slate-50: #f8fafc;
+    --slate-100: #f1f5f9;
+    --slate-200: #e2e8f0;
+    --slate-500: #64748b;
+    --slate-700: #334155;
+    --slate-900: #0f172a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: var(--slate-900);
+    background: var(--slate-50);
+    line-height: 1.55;
+  }
+  header {
+    background: linear-gradient(180deg, var(--slate-900), #1e293b);
+    color: white;
+    padding: 3.5rem 1.5rem;
+    text-align: center;
+  }
+  header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+  header p { color: #cbd5e1; max-width: 42rem; margin: 0 auto; }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 999px;
+    padding: 0.2rem 0.75rem;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+  }
+  main { max-width: 56rem; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+  .grid { display: grid; gap: 1.25rem; grid-template-columns: 1fr; }
+  @media (min-width: 720px) { .grid { grid-template-columns: 1fr 1fr; } }
+  .card {
+    background: white;
+    border: 1px solid var(--slate-200);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .card:hover { border-color: var(--blue); box-shadow: 0 4px 12px rgba(29, 78, 216, 0.08); }
+  .card h2 { font-size: 1.15rem; display: flex; align-items: center; gap: 0.5rem; }
+  .card h2 .dot { width: 0.6rem; height: 0.6rem; border-radius: 999px; background: var(--blue); display: inline-block; }
+  .card p { color: var(--slate-500); font-size: 0.9rem; }
+  .card .url { color: var(--blue); font-size: 0.85rem; font-weight: 600; }
+  .card .sources { font-size: 0.8rem; color: var(--slate-500); border-top: 1px solid var(--slate-100); padding-top: 0.6rem; margin-top: auto; }
+  .section-title { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--slate-500); margin: 2rem 0 0.75rem; }
+  footer {
+    border-top: 1px solid var(--slate-200);
+    background: white;
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--slate-500);
+    font-size: 0.85rem;
+  }
+  footer a { color: var(--blue); }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Tablou de bord</h1>
+    <p>Proiecte civice open source despre România — buget, companii de stat și indicatori economici, din surse publice oficiale.</p>
+    <span class="badge">Date live — API public</span>
+  </header>
+
+  <main>
+    <p class="section-title">Dashboard-uri</p>
+    <div class="grid">
+      <a class="card" href="https://buget.cristian-nichifor.com">
+        <h2><span class="dot" aria-hidden="true"></span>Bugetul României</h2>
+        <p>Venituri, cheltuieli și deficit pe ani (2020–prezent); fluxul banilor publici, destinații, companii de stat și indicatori economici.</p>
+        <span class="url">buget.cristian-nichifor.com</span>
+        <span class="sources">Surse: transparenta.eu · companiidestat.ro · Eurostat · BCE · BNR</span>
+      </a>
+
+      <a class="card" href="https://buget.cristian-nichifor.com/companii-de-stat">
+        <h2><span class="dot" aria-hidden="true"></span>Companii de stat</h2>
+        <p>1.500+ companii de stat: venituri, profit, salariați, sectoare, distribuție pe județe, subvenții și companii listate la BVB.</p>
+        <span class="url">buget.cristian-nichifor.com/companii-de-stat</span>
+        <span class="sources">Sursă: companiidestat.ro (CC BY 4.0)</span>
+      </a>
+
+      <a class="card" href="https://buget.cristian-nichifor.com/economie">
+        <h2><span class="dot" aria-hidden="true"></span>Economia României</h2>
+        <p>Inflație, șomaj, curs EUR/RON, creștere economică, PIB pe locuitor față de UE, datorie publică, comerț și demografie.</p>
+        <span class="url">buget.cristian-nichifor.com/economie</span>
+        <span class="sources">Surse: Eurostat · BCE · BNR</span>
+      </a>
+
+      <a class="card" href="https://buget.cristian-nichifor.com/felia-ta">
+        <h2><span class="dot" aria-hidden="true"></span>Feliuța ta</h2>
+        <p>Câți bani din costul muncii tale ajung la stat și câți îți rămân — simulare de salariu și salariul real ajustat la inflație.</p>
+        <span class="url">buget.cristian-nichifor.com/felia-ta</span>
+        <span class="sources">Surse: INS Tempo · BNR · buget</span>
+      </a>
+    </div>
+
+    <p class="section-title">Pentru dezvoltatori</p>
+    <div class="grid">
+      <a class="card" href="https://api.buget.cristian-nichifor.com/api/budget/years">
+        <h2><span class="dot" aria-hidden="true"></span>API public</h2>
+        <p>JSON API gratuit: buget pe ani, destinații, instituții, companii de stat, inflație, PIB, datorie și curs valutar.</p>
+        <span class="url">api.buget.cristian-nichifor.com</span>
+        <span class="sources">Endpoints: /api/budget · /api/soe · /api/macro · /api/context</span>
+      </a>
+
+      <a class="card" href="https://github.com/CristianNichifor">
+        <h2><span class="dot" aria-hidden="true"></span>Cod sursă</h2>
+        <p>Repo-uri publice: dashboard (React + Workers), BFF (Fastify + Hono, aceleași surse) și această pagină.</p>
+        <span class="url">github.com/CristianNichifor</span>
+        <span class="sources">ro-budget-dashboard · ro-budget-dashboard-bff · tablou</span>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    Proiect educațional — datele provin din surse publice oficiale · <a href="https://github.com/CristianNichifor/tablou">GitHub</a>
+  </footer>
+</body>
+</html>
