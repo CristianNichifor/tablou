@@ -1,0 +1,15 @@
+{
+  "name": "tablou-checks",
+  "version": "0.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "check": "python3 scripts/check-page.py public",
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0"
+  }
+}

@@ -1,12 +1,8 @@
-# tablou
+# Contributing
 
 A static landing page for the budget dashboard and its BFF. Edit `public/index.html`; the page has no application build. Cloudflare serves `public/` using `wrangler.toml`. Keep descriptions and destinations aligned with the owning repositories.
 
-## Setup and verification
-
-Node 22 and Python 3.12: `npm ci`, then `npx --no-install playwright install chromium` once. Run `npm run check` for deterministic structure/local-link checks and `npm test` for desktop/mobile browser smoke checks. These need no credentials or live upstream projects. There is no production build step; npm installs only development test tools.
-
-Preview with `python3 -m http.server 8000 --bind 127.0.0.1 --directory public`. CI reports `verify`. External site availability is operational evidence, not a deterministic PR correctness gate.
+Install Node 22, Python 3.12 and the locked test dependencies with `npm ci`; install Chromium with `npx --no-install playwright install chromium`. Before a PR, run `npm run check` and `npm test`. Include desktop/mobile screenshots for visual changes and explain new project inclusion or changed URLs. No account or production deployment is needed for local verification.
 
 ## Contribution workflow
 
