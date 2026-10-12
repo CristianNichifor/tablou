@@ -1,22 +1,13 @@
 # tablou
 
-Umbrella landing page for the civic dashboards, served free on Cloudflare
-Workers Static Assets at https://tablou.cristian-nichifor.com.
+**Archived.** This landing page is folded into the projects hub:
+https://projects.cristian-nichifor.com/
 
-## Deploy
-
-CI (`.github/workflows/deploy-cloudflare.yml`) deploys on every push to
-`main` using `wrangler-action`; it needs the `CLOUDFLARE_API_TOKEN` +
-`CLOUDFLARE_ACCOUNT_ID` repo secrets. Manual fallback:
-
-```
-pnpm exec wrangler deploy
-```
-
-No build step — plain HTML in `public/`. Requires `wrangler` (`npm i -g wrangler`)
-and OAuth login to the CN Webify Cloudflare account.
+The hub ([digital-public-administration-lab](https://github.com/CristianNichifor/digital-public-administration-lab))
+now carries the links this page held. The old `tablou.cristian-nichifor.com`
+address redirects there.
 
 ## Linked projects
 
-- [ro-budget-dashboard](https://github.com/CristianNichifor/ro-budget-dashboard) — React dashboard (buget.cristian-nichifor.com)
-- [ro-budget-dashboard-bff](https://github.com/CristianNichifor/ro-budget-dashboard-bff) — Fastify/Hono API (api.buget.cristian-nichifor.com)
+- [romania-budget-dashboard](https://github.com/CristianNichifor/romania-budget-dashboard) — budget dashboard, https://budget.cristian-nichifor.com/
+- [romania-budget-dashboard-bff](https://github.com/CristianNichifor/romania-budget-dashboard-bff) — its API, https://budget.cristian-nichifor.com/api/
